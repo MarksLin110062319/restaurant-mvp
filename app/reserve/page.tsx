@@ -1,26 +1,43 @@
 import Link from "next/link";
+
 export default function ReservePage() {
     return (
-        <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
-            {/* 返回按鈕 */}
-            <Link href="/" className="text-gray-400 mb-6 inline-block">← 返回首頁</Link>
+        <main className="min-h-screen bg-[#F8F5F0] px-5 py-8 text-gray-800">
+            <div className="mx-auto flex min-h-[80vh] max-w-2xl flex-col justify-center">
+                <Link
+                    href="/"
+                    className="mb-8 inline-block text-sm text-[#C75B32] hover:underline"
+                >
+                    ← 返回首頁
+                </Link>
 
-            <h1 className="text-3xl font-bold mb-6">
-                線上訂位
-            </h1>
+                <div className="rounded-[2rem] bg-white/80 p-8 text-center shadow-sm">
+                    <p className="mb-2 text-sm tracking-[0.3em] text-[#C75B32]">
+                        RESERVATION
+                    </p>
 
-            <p className="text-gray-400 mb-8 text-center">
-                填寫以下資料，我們將為您保留座位
-            </p>
+                    <h1 className="mb-4 text-4xl font-bold">線上訂位</h1>
 
-            <a
-                href="https://forms.gle/LB2T8o1iF2ewc3ZTA"
-                target="_blank"
-                className="bg-white text-black px-6 py-3 rounded-full font-semibold"
-            >
-                前往填寫訂位資料
-            </a>
+                    <p className="mb-8 leading-7 text-gray-600">
+                        填寫訂位資料後，我們將為您保留座位。
+                        <br />
+                        若遇客滿或特殊情況，店家將再與您確認。
+                    </p>
 
+                    <a
+                        href="你的 Google Form 連結"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-block rounded-full bg-[#E86A33] px-8 py-3 font-semibold text-white shadow-md transition hover:bg-[#d85f2d]"
+                    >
+                        前往填寫訂位資料
+                    </a>
+
+                    <p className="mt-6 text-sm text-gray-500">
+                        營業時間：11:00 - 20:00
+                    </p>
+                </div>
+            </div>
         </main>
     );
 }

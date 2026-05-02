@@ -1,73 +1,85 @@
 import Link from "next/link";
+
+const menuItems = [
+    {
+        category: "人氣推薦",
+        items: [
+            ["綜合生魚片", "$470"],
+            ["綜合握壽司", "$350"],
+            ["鮭魚卵丼", "$300"],
+        ],
+    },
+    {
+        category: "丼飯",
+        items: [
+            ["鮭魚丼", "$180"],
+            ["星鰻丼", "$230"],
+            ["比目魚丼", "$350"],
+        ],
+    },
+    {
+        category: "小品",
+        items: [
+            ["味噌湯", "$30"],
+            ["茶碗蒸", "$60"],
+            ["唐揚雞", "$120"],
+        ],
+    },
+];
+
 export default function MenuPage() {
     return (
-        <main className="min-h-screen bg-black text-white px-6 py-10">
-            {/* 返回按鈕 */}
-            <Link href="/" className="text-gray-400 mb-6 inline-block">
-                ← 返回首頁
-            </Link>
+        <main className="min-h-screen bg-[#F8F5F0] px-5 py-8 text-gray-800">
+            <div className="mx-auto max-w-3xl">
+                <Link
+                    href="/"
+                    className="mb-8 inline-block text-sm text-[#C75B32] hover:underline"
+                >
+                    ← 返回首頁
+                </Link>
 
-            {/* 標題 */}
-            <h1 className="text-3xl font-bold text-center mb-8">電子菜單</h1>
+                <p className="mb-2 text-center text-sm tracking-[0.3em] text-[#C75B32]">
+                    XIN YUE MENU
+                </p>
 
-            {/* 壽司 */}
-            <section className="mb-10">
-                <h2 className="text-xl font-semibold mb-4 border-b border-gray-600 pb-2">
-                    🍣 壽司
-                </h2>
+                <h1 className="mb-8 text-center text-4xl font-bold">電子菜單</h1>
 
-                <div className="space-y-3">
-                    <div className="flex justify-between">
-                        <span>鮭魚握壽司</span>
-                        <span>$40</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span>鮪魚握壽司</span>
-                        <span>$45</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span>炙燒干貝</span>
-                        <span>$80</span>
-                    </div>
+                <div className="space-y-6">
+                    {menuItems.map((section) => (
+                        <section
+                            key={section.category}
+                            className="rounded-[2rem] bg-white/80 p-6 shadow-sm"
+                        >
+                            <h2 className="mb-4 border-b border-orange-100 pb-3 text-2xl font-semibold">
+                                {section.category}
+                            </h2>
+
+                            <div className="space-y-4">
+                                {section.items.map(([name, price]) => (
+                                    <div
+                                        key={name}
+                                        className="flex items-center justify-between gap-4 text-base"
+                                    >
+                                        <span>{name}</span>
+                                        <span className="font-semibold text-[#C75B32]">
+                                            {price}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    ))}
                 </div>
-            </section>
 
-            {/* 丼飯 */}
-            <section className="mb-10">
-                <h2 className="text-xl font-semibold mb-4 border-b border-gray-600 pb-2">
-                    🍱 丼飯
-                </h2>
-
-                <div className="space-y-3">
-                    <div className="flex justify-between">
-                        <span>鮭魚丼</span>
-                        <span>$180</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span>炙燒牛丼</span>
-                        <span>$200</span>
-                    </div>
+                <div className="mt-8 text-center">
+                    <Link
+                        href="/reserve"
+                        className="inline-block rounded-full bg-[#E86A33] px-8 py-3 font-semibold text-white shadow-md"
+                    >
+                        看完菜單，立即訂位
+                    </Link>
                 </div>
-            </section>
-
-            {/* 飲料 */}
-            <section>
-                <h2 className="text-xl font-semibold mb-4 border-b border-gray-600 pb-2">
-                    🍶 飲品
-                </h2>
-
-                <div className="space-y-3">
-                    <div className="flex justify-between">
-                        <span>可樂</span>
-                        <span>$30</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span>日本清酒</span>
-                        <span>$120</span>
-                    </div>
-                </div>
-            </section>
-
+            </div>
         </main>
     );
 }
