@@ -1,6 +1,11 @@
+import Link from "next/link";
 export default function MenuPage() {
     return (
         <main className="min-h-screen bg-black text-white px-6 py-10">
+            {/* 返回按鈕 */}
+            <Link href="/" className="text-gray-400 mb-6 inline-block">
+                ← 返回首頁
+            </Link>
 
             {/* 標題 */}
             <h1 className="text-3xl font-bold text-center mb-8">電子菜單</h1>
