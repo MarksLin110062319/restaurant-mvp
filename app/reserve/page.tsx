@@ -25,7 +25,7 @@ export default function ReservePage() {
                     </p>
 
                     <a
-                        href="你的 Google Form 連結"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeXseWps0mgWFJ8iuaYVRwL-Dil1KJtbjFk39gy7DTv1czdfQ/viewform?usp=dialog"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-block rounded-full bg-[#E86A33] px-8 py-3 font-semibold text-white shadow-md transition hover:bg-[#d85f2d]"
