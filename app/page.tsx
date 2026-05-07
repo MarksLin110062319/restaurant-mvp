@@ -60,7 +60,7 @@ export default function Home() {
             alt="欣悅日式料理"
             width={1000}
             height={1200}
-            className="h-[280px] w-full object-cover object-center md:h-[520px]"
+            className="h-[320px] w-full object-cover object-center md:h-[520px]"
             priority
           />
         </div>
