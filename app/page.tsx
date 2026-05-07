@@ -58,9 +58,9 @@ export default function Home() {
           <Image
             src="/封面.png"
             alt="欣悅日式料理"
-            width={800}
-            height={900}
-            className="h-[420px] w-full object-cover md:h-[560px]"
+            width={1000}
+            height={1200}
+            className="h-[280px] w-full object-cover object-center md:h-[520px]"
             priority
           />
         </div>
