@@ -54,7 +54,7 @@ export default function Home() {
         </div>
 
         {/* 圖片區 */}
-        <div className="w-full max-w-md overflow-hidden rounded-[2rem] shadow-xl md:max-w-xl lg:max-w-2xl">
+        <div className="w-full max-w-lg overflow-hidden rounded-[2rem] shadow-xl md:max-w-2xl lg:max-w-4xl">
           <Image
             src="/封面.png"
             alt="欣悅日式料理"
