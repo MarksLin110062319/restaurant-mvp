@@ -19,9 +19,9 @@ export default function Home() {
           </h1>
 
           <p className="mb-6 text-base leading-7 text-gray-600 md:text-lg">
-            每日新鮮漁獲・生魚片丼飯・握壽司
+            每日新鮮生魚片丼飯・握壽司
             <br />
-            從 IG 看見我們？現在可以直接查看菜單、線上訂位。
+            現在可以直接查看菜單、線上訂位。
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
